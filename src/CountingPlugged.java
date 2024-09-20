@@ -18,7 +18,7 @@ public class CountingPlugged {
 
     // Read text file and replace all new lines, punctuation, and repeated spaces with a single space.
     String[] file = new String(Files.readAllBytes(Path.of("textOne.txt")))
-        .replaceAll("[\n”“?!,.]", " ")
+        .replaceAll("[\r\n”“?!,.\"]", " ")
         .replaceAll("([ ]+)", " ").split(" ");
 
     // Store an ArrayList of Word objects that represents distinct words and their number of occurrences
@@ -40,6 +40,8 @@ public class CountingPlugged {
     Collections.sort(wordFrequencies);
 
     // Print word occurrence array
-    System.out.println(wordFrequencies);
+    for (int i = 0; i < 30; i++) {
+      System.out.println(wordFrequencies.get(i));
+    }
   }
 }
