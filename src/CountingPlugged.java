@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class CountingUnplugged {
+public class CountingPlugged {
   public static void main(String[] args) throws IOException {
     // Read common words and split by ', ' (to get each word without whitespace or punctuation)
     String[] words = new String(Files.readAllBytes(Path.of("commonWords.txt")))
